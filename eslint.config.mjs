@@ -10,6 +10,8 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  // Preserve the third-party parser byte-for-byte; lint our integration instead.
+  { ignores: ["src/lib/vendor/bibtex-parse-js.cjs"] },
   ...compat.extends("next/core-web-vitals", "next/typescript"),
 ];
 

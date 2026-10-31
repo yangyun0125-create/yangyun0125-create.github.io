@@ -2,6 +2,10 @@
 
 日常更新主要编辑 `content/`（英文）与 `content_zh/`（简体中文），无需修改 React 核心组件。两种语言使用相同文件名；缺少中文文件时 PRISM 会回退到英文，所以更新内容时请同步两种语言。
 
+最方便的方式是登录自己的 GitHub，打开本网站仓库中的目标文件，点击铅笔按钮修改，再选择 **Commit changes → Commit directly to the main branch**。提交后查看 **Actions**，等待构建与部署显示绿色成功，再刷新网站。中英文正文建议同步修改后一起提交，也可以使用 GitHub 的网页代码编辑器批量编辑。
+
+不熟悉 Git 时可直接使用上述网页操作。此电脑的本地项目目录为 `D:\Website-mine\yun-yang`；本地 `.git` 保留了原有 PRISM 历史与远程设置，推送前请按部署指南确认目标仓库。
+
 ## 1. 文件地图
 
 | 内容 | 英文 | 中文 |
@@ -118,6 +122,8 @@ linkedin = ""
 
 填入你自己的真实地址或完整 HTTPS URL；`email` 只填写邮箱地址，不加 `mailto:`。空字符串不会生成社交按钮。姓名、单位、邮箱等会由中文配置自动继承，除非在中文文件中主动覆盖。
 
+个人 GitHub 地址目前按你的要求留空，首页和中英文联系页都不会展示它。网站的 GitHub Pages 部署不需要填写这个社交字段。
+
 联系页正文是 Markdown。如需在 Contact 页展示新链接，请同步编辑两份 `contact.md`，添加相应真实 Markdown 链接并移除“稍后补充”的文字。侧栏链接与联系页正文分别维护，避免遗漏。
 
 `location` 当前为 Dijon, France / 法国·第戎。只有提供真实详细地址后才填写 `location_details` 与 `location_url`；不使用虚构办公室或默认地图网址。
@@ -135,6 +141,7 @@ linkedin = ""
 ```powershell
 npm run typecheck
 npm run lint
+npm run check:bibtex
 npm run build
 npm run check:export
 npm run preview

@@ -51,7 +51,6 @@ export interface Publication {
   selected?: boolean;
   preview?: string;
   summary?: string;
-  researchArea: ResearchArea;
   description?: string;
 }
 
@@ -73,15 +72,3 @@ export type PublicationStatus =
   | 'submitted'
   | 'in-preparation'
   | 'draft';
-
-export type ResearchArea =
-  | 'ai-healthcare'
-  | 'signal-processing'
-  | 'reliability-engineering'
-  | 'quantum-computing'
-  | 'machine-learning'
-  | 'fault-diagnosis'
-  | 'neural-networks'
-  | 'transformer-architectures'
-  | 'biomedical-engineering'
-  | 'other';

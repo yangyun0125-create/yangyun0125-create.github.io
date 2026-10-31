@@ -14,7 +14,7 @@ A bilingual academic website customized directly from [xyjoey/PRISM](https://git
 Install Node.js 22 or later, including npm.
 
 ```powershell
-cd D:\Website-mine\yangyun0125-create.github.io
+cd D:\Website-mine\yun-yang
 npm ci
 npm run dev
 ```
@@ -24,6 +24,7 @@ Development: http://localhost:3000
 ```powershell
 npm run typecheck
 npm run lint
+npm run check:bibtex
 npm run build
 npm run check:export
 npm run preview
@@ -31,8 +32,8 @@ npm run preview
 
 Static preview: http://localhost:4173
 
-See [DEPLOYMENT.md](DEPLOYMENT.md) for GitHub Pages and subdirectory deployment, [CONTENT_GUIDE.md](CONTENT_GUIDE.md) for Chinese content-maintenance instructions, and [CHANGES.md](CHANGES.md) for the modification record.
+See [DEPLOYMENT.md](DEPLOYMENT.md) for GitHub Pages, [CONTENT_GUIDE.md](CONTENT_GUIDE.md) for Chinese content-maintenance instructions, and [CLEANUP_REPORT.md](CLEANUP_REPORT.md) for the cleanup audit.
 
 Personal information remains in `content/` and `content_zh/`. The owner-provided portrait and email (yun.yang@inrae.fr) are configured. Publications, awards, supervisors and other personal links are included only when verified. Add a real CV PDF when available.
 
-PRISM is MIT licensed; the original [LICENSE](LICENSE) is preserved. Upstream documentation remains in `docs/`.
+PRISM is MIT licensed; the original [LICENSE](LICENSE) is preserved. The unmodified BibTeX parser and its license are documented in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Theme switching uses Zustand; styling uses Tailwind 4's CSS configuration in `src/app/globals.css`.

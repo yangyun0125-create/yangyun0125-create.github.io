@@ -1,13 +1,15 @@
 # GitHub Pages 部署指南
 
-本项目从 PRISM 官方仓库直接定制，使用 Next.js 静态导出，无需服务器或数据库。最终产物位于 `out/`。当前公开站点为 https://yangyun0125-create.github.io，尚未发布到你的 GitHub。
+本项目从 PRISM 官方仓库直接定制，使用 Next.js 静态导出，无需服务器或数据库。最终产物位于 `out/`。当前主站已发布至 [GitHub Pages](https://yangyun0125-create.github.io/)，源码仓库为 [yangyun0125-create/yangyun0125-create.github.io](https://github.com/yangyun0125-create/yangyun0125-create.github.io)。
+
+日常修改可直接在现有仓库编辑 `content/` 与 `content_zh/` 并提交到 `main`，Actions 会重新部署。逐项操作见 [中文维护指南](CONTENT_GUIDE.md)。不需要重新创建仓库。
 
 ## 1. 本地环境
 
 安装 Node.js 22 或更新的受支持 LTS 版本，并确保安装程序包含 npm。打开 PowerShell：
 
 ```powershell
-cd D:\Website-mine\yangyun0125-create.github.io
+cd D:\Website-mine\yun-yang
 npm ci
 npm run dev
 ```
@@ -19,6 +21,7 @@ npm run dev
 ```powershell
 npm run typecheck
 npm run lint
+npm run check:bibtex
 npm run build
 npm run check:export
 npm run preview
@@ -26,7 +29,9 @@ npm run preview
 
 访问 [静态导出预览](http://localhost:4173)。`npm start` 也使用这个静态预览服务器；静态导出不使用 `next start`。预览仅监听本机，请勿将它当成生产服务器。Ctrl+C 停止服务。
 
-## 2. 创建自己的 GitHub 仓库
+## 2. 将来迁移至其他 GitHub 仓库
+
+当前仓库已配置完成。本节仅供将来迁移到新的空仓库使用。本机 `.git` 保留原有 PRISM 历史，和网页创建的现有 GitHub 仓库不是同一条历史；不要直接向现有仓库强制推送，也不要用此节的新仓库步骤覆盖它。日常维护优先使用上方的网页编辑流程。
 
 推荐为长期学术网站创建公开仓库，以使用免费 GitHub Pages。二选一：
 
@@ -60,7 +65,7 @@ git push -u origin main
 工作流 `.github/workflows/deploy.yml` 已配置：
 
 - Node.js 22 与 npm 缓存；
-- `npm ci`、TypeScript、ESLint；
+- `npm ci`、TypeScript、ESLint 与 BibTeX 兼容检查；
 - 由 `actions/configure-pages` 自动取得 `base_url` 和 `base_path`；
 - 通过 `SITE_URL` 和 `BASE_PATH` 构建静态站点；
 - 检查页面、静态资源、canonical 与 sitemap；

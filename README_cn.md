@@ -8,5 +8,7 @@
 - [GitHub Pages 部署说明](DEPLOYMENT.md)
 - [中文内容维护指南](CONTENT_GUIDE.md)
 - [修改清单与验证记录](CHANGES.md)
+- [项目清理报告](CLEANUP_REPORT.md)
+- [第三方许可证说明](THIRD_PARTY_NOTICES.md)
 
 网站已配置本人提供的证件照与邮箱 yun.yang@inrae.fr。论文及其他未提供的账号链接仍留空；真实 CV PDF 上传前不会显示下载按钮。

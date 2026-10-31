@@ -31,8 +31,16 @@ for (const item of config.navigation) {
     assert.ok(fs.existsSync(target), `Missing asset/link: ${value} on ${item.href}`);
     checked++;
   }
-  if (item.target === 'cv' && !fs.existsSync('public/cv/yun-yang-cv.pdf')) {
-    assert.ok(!/<a[^>]+download/.test(html), 'Missing CV must not render a download button');
+  if (item.target === 'cv') {
+    const cv = parse(fs.readFileSync('content/cv.toml', 'utf8'));
+    const available = typeof cv.download === 'string' && fs.existsSync(path.resolve('public', `.${cv.download}`));
+    if (!available) assert.ok(!/<a[^>]+download/.test(html), 'Missing CV must not render a download button');
+  }
+  if (!config.social.github) assert.ok(!html.includes('https://github.com/yangyun0125-create'), `Personal GitHub profile must stay hidden: ${item.href}`);
+}
+for (const directory of ['content', 'content_zh']) {
+  for (const name of ['bio.md', 'overview.md', 'research.md', 'cv.md', 'contact.md', 'about.toml', 'news.toml']) {
+    assert.ok(fs.readFileSync(path.join(directory, name), 'utf8').trim(), `Missing locale content: ${directory}/${name}`);
   }
 }
 for (const asset of ['favicon.svg', 'images/avatar-placeholder.svg', 'robots.txt', 'sitemap.xml']) assert.ok(fs.existsSync(path.join(root, asset)), `Missing ${asset}`);

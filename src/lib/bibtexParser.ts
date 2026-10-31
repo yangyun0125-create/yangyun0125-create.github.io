@@ -1,10 +1,10 @@
-import { Publication, PublicationType, ResearchArea } from '@/types/publication';
+import { Publication, PublicationType } from '@/types/publication';
 import { getConfig } from './config';
 import { getRuntimeI18nConfig } from './i18n/config';
 import { parseBibTeXInline } from './bibtexInline';
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
-const bibtexParse = require('bibtex-parse-js');
+const bibtexParse = require('./vendor/bibtex-parse-js.cjs');
 
 // Map BibTeX entry types to our publication types
 const typeMapping: Record<string, PublicationType> = {
@@ -76,7 +76,6 @@ export function parseBibTeX(bibtexContent: string, locale?: string): Publication
       status: 'published',
       tags: keywords,
       keywords,
-      researchArea: detectResearchArea(tags.title, keywords),
 
       // Optional fields
       journal: cleanBibTeXString(tags.journal),
@@ -235,31 +234,6 @@ function cleanBibTeXString(str?: string): string {
   if (!str) return '';
 
   return parseBibTeXInline(str).plainText;
-}
-
-function detectResearchArea(title: string, keywords: string[]): ResearchArea {
-  const text = (title + ' ' + keywords.join(' ')).toLowerCase();
-
-  if (text.includes('healthcare') || text.includes('medical') || text.includes('health')) {
-    return 'ai-healthcare';
-  }
-  if (text.includes('signal') || text.includes('processing')) {
-    return 'signal-processing';
-  }
-  if (text.includes('reliability') || text.includes('fault') || text.includes('diagnosis')) {
-    return 'reliability-engineering';
-  }
-  if (text.includes('quantum')) {
-    return 'quantum-computing';
-  }
-  if (text.includes('neural') || text.includes('spiking')) {
-    return 'neural-networks';
-  }
-  if (text.includes('transformer') || text.includes('attention')) {
-    return 'transformer-architectures';
-  }
-
-  return 'machine-learning';
 }
 
 function reconstructBibTeX(entry: { entryType: string; citationKey: string; entryTags: Record<string, string> }, excludeFields: string[] = []): string {
