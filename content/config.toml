@@ -19,7 +19,7 @@ avatar = "/images/avatar.jpg"
 location = "Dijon, France"
 # Unconfirmed personal links remain hidden.
 email = "yun.yang@inrae.fr"
-github = "https://github.com/yangyun0125-create"
+github = "" # Hidden at the owner’s request.
 google_scholar = ""
 orcid = ""
 linkedin = ""
