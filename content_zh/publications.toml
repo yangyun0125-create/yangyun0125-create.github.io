@@ -1,0 +1,5 @@
+type = "publication"
+title = "学术成果"
+description = "研究论文与学术工作。"
+empty_message = "目前尚未列出论文，后续将随研究进展更新。"
+source = "publications.bib"

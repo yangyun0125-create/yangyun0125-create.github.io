@@ -1,0 +1,72 @@
+[site]
+title = "Yun Yang"
+description = "Yun Yang is a PhD student at Institut Agro Dijon / INRAE CESAER, researching technological innovation, agricultural sustainability, and green productivity."
+favicon = "/favicon.svg"
+last_updated = "October 31, 2026"
+# Current public URL. GitHub Actions overrides it with the actual Pages URL.
+url = "https://yangyun0125-create.github.io"
+
+[author]
+name = "Yun Yang"
+secondary_name = "杨郧"
+title = "PhD Student"
+institution = "Institut Agro Dijon"
+affiliation = "INRAE · CESAER (UMR 1041)"
+# User-provided portrait. Blank uses the YY placeholder.
+avatar = "/images/avatar.jpg"
+
+[social]
+location = "Dijon, France"
+# Unconfirmed personal links remain hidden.
+email = "yun.yang@inrae.fr"
+github = "https://github.com/yangyun0125-create"
+google_scholar = ""
+orcid = ""
+linkedin = ""
+
+[features]
+enable_likes = false
+enable_one_page_mode = false
+
+[i18n]
+enabled = true
+locales = ["en", "zh"]
+default_locale = "en"
+mode = "fixed"
+fixed_locale = "en"
+persist = true
+switcher = true
+
+[i18n.labels]
+en = "English"
+zh = "中文"
+
+[[navigation]]
+title = "Home"
+type = "page"
+target = "about"
+href = "/"
+
+[[navigation]]
+title = "Research"
+type = "page"
+target = "research"
+href = "/research"
+
+[[navigation]]
+title = "Publications"
+type = "page"
+target = "publications"
+href = "/publications"
+
+[[navigation]]
+title = "CV"
+type = "page"
+target = "cv"
+href = "/cv"
+
+[[navigation]]
+title = "Contact"
+type = "page"
+target = "contact"
+href = "/contact"

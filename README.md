@@ -1,2 +1,38 @@
-# yangyun0125-create.github.io
-Academic website of Yun Yang · PhD Student at Institut Agro Dijon / INRAE CESAER
+# Yun Yang · Academic Website
+
+[Academic website](https://yangyun0125-create.github.io/) · [Source repository](https://github.com/yangyun0125-create/yangyun0125-create.github.io)
+
+A bilingual academic website customized directly from [xyjoey/PRISM](https://github.com/xyjoey/PRISM), upstream commit `f2748db` (PRISM 1.3.3). The original component system, responsive layout, Framer Motion animations, theme switching, internationalization and BibTeX parser are retained.
+
+- Next.js 15.5.28 · React 19 · TypeScript · Tailwind CSS 4
+- English by default, with persistent Simplified Chinese switching
+- Home · Research · Publications · CV · Contact
+- Static export to `out/`, ready for GitHub Pages
+
+## Run locally
+
+Install Node.js 22 or later, including npm.
+
+```powershell
+cd D:\Website-mine\yangyun0125-create.github.io
+npm ci
+npm run dev
+```
+
+Development: http://localhost:3000
+
+```powershell
+npm run typecheck
+npm run lint
+npm run build
+npm run check:export
+npm run preview
+```
+
+Static preview: http://localhost:4173
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for GitHub Pages and subdirectory deployment, [CONTENT_GUIDE.md](CONTENT_GUIDE.md) for Chinese content-maintenance instructions, and [CHANGES.md](CHANGES.md) for the modification record.
+
+Personal information remains in `content/` and `content_zh/`. The owner-provided portrait and email (yun.yang@inrae.fr) are configured. Publications, awards, supervisors and other personal links are included only when verified. Add a real CV PDF when available.
+
+PRISM is MIT licensed; the original [LICENSE](LICENSE) is preserved. Upstream documentation remains in `docs/`.

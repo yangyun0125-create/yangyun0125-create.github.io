@@ -1,0 +1,44 @@
+[site]
+title = "杨郧"
+description = "杨郧，法国 Institut Agro Dijon / INRAE CESAER 博士生，关注技术创新、农业可持续转型、绿色生产率与环境绩效。"
+last_updated = "2026年10月31日"
+
+[author]
+name = "杨郧"
+secondary_name = "Yun Yang"
+title = "博士生"
+institution = "Institut Agro Dijon"
+affiliation = "INRAE · CESAER (UMR 1041)"
+
+[social]
+location = "法国 · 第戎"
+
+[[navigation]]
+title = "首页"
+type = "page"
+target = "about"
+href = "/"
+
+[[navigation]]
+title = "研究"
+type = "page"
+target = "research"
+href = "/research"
+
+[[navigation]]
+title = "学术成果"
+type = "page"
+target = "publications"
+href = "/publications"
+
+[[navigation]]
+title = "简历"
+type = "page"
+target = "cv"
+href = "/cv"
+
+[[navigation]]
+title = "联系"
+type = "page"
+target = "contact"
+href = "/contact"

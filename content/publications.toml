@@ -1,0 +1,5 @@
+type = "publication"
+title = "Publications"
+description = "Research publications and scholarly work."
+empty_message = "No publications are currently listed. This page will be updated as research becomes available."
+source = "publications.bib"

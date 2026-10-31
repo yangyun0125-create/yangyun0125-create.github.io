@@ -1,0 +1,6 @@
+type = "text"
+title = "Curriculum Vitae"
+description = "Yun Yang · PhD Student · Dijon, France"
+source = "cv.md"
+download = "/cv/yun-yang-cv.pdf"
+download_label = "Download CV (PDF)"

@@ -1,0 +1,6 @@
+type = "text"
+title = "个人简历"
+description = "杨郧 · 博士生 · 法国第戎"
+source = "cv.md"
+download = "/cv/yun-yang-cv.pdf"
+download_label = "下载简历（PDF）"

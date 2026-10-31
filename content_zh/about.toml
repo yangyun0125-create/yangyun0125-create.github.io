@@ -1,0 +1,38 @@
+type = "about"
+title = "首页"
+
+[profile]
+research_interests = [
+  "农业可持续发展",
+  "技术创新",
+  "绿色生产率与环境绩效",
+  "环境与农业经济学",
+  "生产率与效率分析",
+  "中国与欧盟比较研究",
+  "数据包络分析（DEA）"
+]
+
+[[sections]]
+id = "bio"
+type = "markdown"
+source = "bio.md"
+title = "关于我"
+
+[[sections]]
+id = "research_overview"
+type = "markdown"
+source = "overview.md"
+title = "研究概览"
+
+[[sections]]
+id = "featured_publications"
+type = "publications"
+title = "精选论文"
+filter = "selected"
+limit = 5
+
+[[sections]]
+id = "news"
+type = "list"
+title = "最新动态"
+source = "news.toml"
