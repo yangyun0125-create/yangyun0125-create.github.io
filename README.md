@@ -9,6 +9,8 @@ A bilingual academic website customized directly from [xyjoey/PRISM](https://git
 - Home · Research · Publications · CV · Contact
 - Static export to `out/`, ready for GitHub Pages
 
+Start with the Chinese [beginner's guide](使用指南.md) and [quick checklist](快速操作清单.md) for everyday content updates.
+
 ## Run locally
 
 Install Node.js 22 or later, including npm.

@@ -4,6 +4,8 @@
 
 本项目直接基于 [xyjoey/PRISM](https://github.com/xyjoey/PRISM) 修改，保留原项目组件、响应式布局、动画、深色模式、国际化与 BibTeX 系统。
 
+- [零基础使用指南](使用指南.md)
+- [一页快速操作清单](快速操作清单.md)
 - [本地运行与项目说明](README.md)
 - [GitHub Pages 部署说明](DEPLOYMENT.md)
 - [中文内容维护指南](CONTENT_GUIDE.md)
